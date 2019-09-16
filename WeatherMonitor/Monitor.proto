@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package WeatherMonitor;
+
+message Monitor {
+	required int64 datestamp = 1;
+	optional float fahrenheit = 2;
+	optional float celsius = 3;
+	optional float pressure = 4;
+	optional int32 humidity = 5;
+}
+
+message Statistics {
+	repeated Monitor monitor = 1;
+}
+	

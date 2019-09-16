@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherStation", "WeatherStation\WeatherStation.csproj", "{5D6AC529-D285-435A-AE1C-7801A1B2046D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WeatherMonitor", "WeatherMonitor\WeatherMonitor.pyproj", "{86589B31-F24D-4358-9016-C5F8E2898A54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D6AC529-D285-435A-AE1C-7801A1B2046D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6AC529-D285-435A-AE1C-7801A1B2046D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6AC529-D285-435A-AE1C-7801A1B2046D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6AC529-D285-435A-AE1C-7801A1B2046D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86589B31-F24D-4358-9016-C5F8E2898A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86589B31-F24D-4358-9016-C5F8E2898A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80119BAA-9273-4538-B210-B186ED91D9F6}
+	EndGlobalSection
+EndGlobal
