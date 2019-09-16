@@ -1,0 +1,55 @@
+﻿@page
+@model WeatherStation.Pages.WeatherStats.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>WeatherStats</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="WeatherStats.Id" />
+            <div class="form-group">
+                <label asp-for="WeatherStats.DateStamp" class="control-label"></label>
+                <input asp-for="WeatherStats.DateStamp" class="form-control" />
+                <span asp-validation-for="WeatherStats.DateStamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeatherStats.TempFahrenheit" class="control-label"></label>
+                <input asp-for="WeatherStats.TempFahrenheit" class="form-control" />
+                <span asp-validation-for="WeatherStats.TempFahrenheit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeatherStats.TempCelsius" class="control-label"></label>
+                <input asp-for="WeatherStats.TempCelsius" class="form-control" />
+                <span asp-validation-for="WeatherStats.TempCelsius" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeatherStats.Pressure" class="control-label"></label>
+                <input asp-for="WeatherStats.Pressure" class="form-control" />
+                <span asp-validation-for="WeatherStats.Pressure" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeatherStats.Humidity" class="control-label"></label>
+                <input asp-for="WeatherStats.Humidity" class="form-control" />
+                <span asp-validation-for="WeatherStats.Humidity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

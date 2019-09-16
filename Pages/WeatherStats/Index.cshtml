@@ -1,0 +1,60 @@
+﻿@page
+@model WeatherStation.Pages.WeatherStats.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WeatherStats[0].DateStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeatherStats[0].TempFahrenheit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeatherStats[0].TempCelsius)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeatherStats[0].Pressure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeatherStats[0].Humidity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.WeatherStats) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempFahrenheit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempCelsius)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pressure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Humidity)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
