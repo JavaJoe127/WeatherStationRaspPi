@@ -7,7 +7,7 @@ namespace WeatherStation.Conversions
 {
     public class Rounding
     {
-        public static decimal RoundToSignificantFigures(decimal num, int n)
+        public static decimal RoundToSignificantFigures(double num, int n)
         {
             if (num == 0)
             {
@@ -21,15 +21,15 @@ namespace WeatherStation.Conversions
             int power = n - d;
 
             // Same here, Math.Pow(10, *) is an integer number
-            decimal magnitude = (decimal)Math.Pow(10, power);
+            var magnitude = (double)Math.Pow(10, power);
 
             // I'm using the MidpointRounding.AwayFromZero . I'm not sure
             // having a MidpointRounding.ToEven would be useful (is Banker's
             // rounding used for significant figures?)
-            decimal shifted = Math.Round(num * magnitude, 0, MidpointRounding.AwayFromZero);
-            decimal ret = shifted / magnitude;
+            var shifted = Math.Round(num * magnitude, 0, MidpointRounding.AwayFromZero);
+            var ret = shifted / magnitude;
 
-            return ret;
+            return (decimal)ret;
         }
     }
 }

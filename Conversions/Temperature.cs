@@ -10,15 +10,15 @@ namespace WeatherStation.Conversions
         private const double CONV_MULTIPLIER = 1.8;
         private const double CONV_ADD = 32.0;
 
-        public static decimal ToFahrenheit(decimal celsius)
+        public static decimal ToFahrenheit(double celsius)
         {
-            decimal ret = (decimal)((CONV_MULTIPLIER * (double)celsius) + CONV_ADD);
+            double ret = ((CONV_MULTIPLIER * celsius) + CONV_ADD);
             return Rounding.RoundToSignificantFigures(ret, 6);
         }
 
-        public static decimal ToCelsius(decimal fahrenheit)
+        public static decimal ToCelsius(double fahrenheit)
         {
-            decimal ret = (decimal)(((double)fahrenheit - CONV_ADD) / CONV_MULTIPLIER);
+            double ret = ((fahrenheit - CONV_ADD) / CONV_MULTIPLIER);
             return Rounding.RoundToSignificantFigures(ret, 6);
         }
     }
